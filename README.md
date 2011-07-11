@@ -22,9 +22,11 @@ By default all record fields contain a union of their actual type and atom "unde
 Implementation
 --------------
 Current implementation of JANE is an escript file that can be used inside of rebar post-hook:
+
 ```erlang
 {post_hooks, [{'compile', './priv/recordparser ignore_undefined include/test.hrl'}]}.
 ```
+
 By default, all resulting .json files will be located in priv/records/test.json, where test is a name of .hrl file.
 
 Example
